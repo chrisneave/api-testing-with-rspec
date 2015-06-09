@@ -4,7 +4,7 @@ require "json"
 
 class Api
   include HTTParty
-  base_uri "http://localhost:" + ENV["PORT"]
+  base_uri "http://api:" + ENV["PORT"]
 end
 
 describe "API" do

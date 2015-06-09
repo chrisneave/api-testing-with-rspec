@@ -1,0 +1,20 @@
+api:
+  image: node:0.12.4
+  expose:
+    - "3000"
+  volumes:
+    - .:/code
+  environment:
+    PORT: 3000
+  working_dir: /code
+  command: npm start
+
+test:
+  build: .
+  links:
+    - api
+  volumes:
+    - .:/code
+  environment:
+    PORT: 3000
+  working_dir: /code
