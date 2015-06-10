@@ -3,4 +3,4 @@ WORKDIR /code
 # Add the Gemfile so dependencies can be bootstrapped.
 ADD Gemfile /code/
 RUN bundle install
-ENTRYPOINT ["bash", "run-tests.sh"]
+ENTRYPOINT ["bash", "entrypoint.sh"]
